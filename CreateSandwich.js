@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const sandwichSchema = new Schema({
-
-  /* Schema for new sandwich should go here */
-
-
+  // Example Schema??
+  // title: String,
+  // restaurant: String,
+  // location: String,
 });
 
 const CreateSandwich = mongoose.model('CreateSandwich', sandwichSchema);
