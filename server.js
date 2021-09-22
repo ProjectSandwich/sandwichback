@@ -29,7 +29,7 @@ app.get('/getSandwiches', async (req, res) => {
   res.send(sandos);
 });
 
-app.post('/getSandwiches', postSandwiches);
+app.post('/sandwiches', postSandwiches);
 
 async function postSandwiches(req, res) {
 
