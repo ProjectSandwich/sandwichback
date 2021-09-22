@@ -29,10 +29,25 @@ app.get('/getSandwiches', async (req, res) => {
   res.send(sandos);
 });
 
+app.post('/getSandwiches', postSandwiches);
 
+async function postSandwiches(req, res) {
+
+  try {
+    const newSandwich = await Sandwich.create(req.body);
+    res.send(newSandwich);
+  }
+  catch (err) {
+    handleError(err, res);
+  }
+}
 
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
 
+function handleError(err, res) {
+  console.log(err);
+  res.status(500).send('Error!');
+}
 
