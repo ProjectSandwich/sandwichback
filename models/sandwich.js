@@ -9,6 +9,7 @@ const sandwichSchema = new Schema({
   latitude: Number,
   longitude: Number,
   description: String,
+  yelpUrl: String,
 });
 
 // await Sandwich.create({

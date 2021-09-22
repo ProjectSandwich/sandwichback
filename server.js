@@ -46,6 +46,8 @@ async function getYelp(req, res) {
       }
     });
 
+    
+
     res.send(locations.data);
 
   }
