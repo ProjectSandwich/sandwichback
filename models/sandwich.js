@@ -7,7 +7,8 @@ const sandwichSchema = new Schema({
   restaurant: String,
   address: String,
   latitude: Number,
-  longitude: Number
+  longitude: Number,
+  description: String,
 });
 
 // await Sandwich.create({
