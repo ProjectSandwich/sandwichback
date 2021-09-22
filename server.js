@@ -57,7 +57,6 @@ async function getYelp(req, res) {
   catch (err) {
     handleError(err, res);
   }
-
 }
 
 class Location {
