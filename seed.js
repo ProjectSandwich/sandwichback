@@ -32,7 +32,7 @@ async function seed() {
   });
 
   await Sandwich.create({
-    sandwich: '',
+    sandwich: 'Fish Sandwich',
     restaurant: 'Catfish Charlie’s',
     address: '1630 E 16th St, Dubuque, IA 52001',
     latitude: 42.511970,
