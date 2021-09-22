@@ -46,15 +46,27 @@ async function getYelp(req, res) {
       }
     });
 
-    
-
-    res.send(locations.data);
+    const yelpData = locations.data.businesses;
+    const yelpObjs = yelpData.map(location => {
+      return new Location(location);
+    });
+    console.log(yelpObjs);
+    res.send(yelpObjs);
 
   }
   catch (err) {
     handleError(err, res);
   }
 
+}
+
+class Location {
+  constructor(yelpLocationObj) {
+    this.restaurant = yelpLocationObj.name;
+    this.lat = yelpLocationObj.coordinates.latitude;
+    this.lon = yelpLocationObj.coordinates.longitude;
+    this.yelpUrl = yelpLocationObj.url;
+  }
 }
 
 app.post('/sandwiches', postSandwiches);
