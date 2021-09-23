@@ -83,7 +83,7 @@ async function postSandwiches(req, res) {
 
 const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, () => console.log(`listening on ${PORT}`));
+app.listen(PORT, () => console.log(`listening on http://localhost:${PORT}`));
 
 function handleError(err, res) {
   console.log(err);
