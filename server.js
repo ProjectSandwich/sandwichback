@@ -50,7 +50,6 @@ async function getYelp(req, res) {
     const yelpObjs = yelpData.map(location => {
       return new Location(location);
     });
-    console.log(yelpObjs);
     res.send(yelpObjs);
 
   }
@@ -65,7 +64,11 @@ class Location {
     this.lat = yelpLocationObj.coordinates.latitude;
     this.lon = yelpLocationObj.coordinates.longitude;
     this.yelpUrl = yelpLocationObj.url;
+    this.addressLines = yelpLocationObj.location.display_address;
+
+    console.log(yelpLocationObj);
   }
+
 }
 
 app.post('/sandwiches', postSandwiches);
