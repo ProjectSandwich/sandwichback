@@ -159,10 +159,9 @@ async function seed() {
     longitude: -91.35099790221581
   });
 
-
-
-
   await sandwichData.save();
+
+  mongoose.disconnect();
 }
 
 seed();
